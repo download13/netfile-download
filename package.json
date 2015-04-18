@@ -1,0 +1,28 @@
+{
+  "name": "netfile-download",
+  "version": "0.0.0",
+  "description": "Downloads yearly zip files from from city Netfile portals",
+  "main": "netfile-download.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "request": "^2.55.0"
+  },
+  "devDependencies": {
+    "node-zip": "^1.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/download13/netfile-download.git"
+  },
+  "author": "Erin Dachtler <download333@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/download13/netfile-download/issues"
+  },
+  "homepage": "https://github.com/download13/netfile-download"
+}
