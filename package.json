@@ -1,12 +1,16 @@
 {
   "name": "netfile-download",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Downloads yearly zip files from from city Netfile portals",
   "main": "netfile-download.js",
+  "bin": {
+    "netfile-download": "bin/netfile-download.js"
+  },
   "directories": {
     "test": "test"
   },
   "dependencies": {
+    "commander": "^2.8.0",
     "request": "^2.55.0"
   },
   "devDependencies": {
