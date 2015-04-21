@@ -16,6 +16,12 @@ function netfileDownload(aid, year, cb) {
 			return cb(new Error('Page failed to load'));
 		}
 
+		var yearsAvailable = extractOptions(body);
+
+		if(yearsAvailable.indexOf(year) === -1) {
+			return cb(new Error('year ' + year + ' is not available from this endpoint, the following are: ' + yearsAvailable.join(', ')));
+		}
+
 		var form = {
 			__EVENTTARGET: 'ctl00$phBody$GetExcelAmend',
 			__EVENTARGUMENT: '',
@@ -51,6 +57,15 @@ function extractVariable(name, body) {
 	var length = body.indexOf(tokenEnd, start) - start;
 
 	return body.substr(start, length);
+}
+
+function extractOptions(body) {
+	var re = /option value="([0-9]{4})"/;
+	var reg = /option value="([0-9]{4})"/g;
+
+	return body.match(reg).map(function(match) {
+		return match.match(re)[1];
+	});
 }
 
 
