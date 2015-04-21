@@ -1,6 +1,6 @@
 {
   "name": "netfile-download",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Downloads yearly zip files from from city Netfile portals",
   "main": "netfile-download.js",
   "bin": {
